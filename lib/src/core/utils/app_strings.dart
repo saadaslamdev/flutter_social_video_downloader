@@ -21,4 +21,6 @@ class AppStrings {
     {"name": "Youtube", "description": "Download Youtube Videos"},
     {"name": "Facebook", "description": "Download Facebook Videos"},
   ];
+  static const String darkMode = "Dark Mode";
+  static const String lightMode = "Light Mode";
 }

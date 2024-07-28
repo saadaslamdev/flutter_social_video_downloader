@@ -152,7 +152,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ],
           ),
         ),
-        CustomBottomAppBar(onMenuPressed: () {}, onDownloadPressed: () {})
+        SafeArea(child: CustomBottomAppBar(onDownloadPressed: () {}))
       ],
     ));
   }

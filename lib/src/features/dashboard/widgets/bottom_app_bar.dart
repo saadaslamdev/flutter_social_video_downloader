@@ -3,12 +3,13 @@ import 'package:flutter_social_videos_downloader/src/core/media_query.dart';
 import 'package:flutter_social_videos_downloader/src/features/dashboard/widgets/circular_elevated_button.dart';
 
 import '../../../core/utils/app_colors.dart';
+import 'animated_toggle_button.dart';
 
 class CustomBottomAppBar extends StatelessWidget {
-  final VoidCallback? onMenuPressed;
+  final VoidCallback? onSharePressed;
   final VoidCallback? onDownloadPressed;
   const CustomBottomAppBar(
-      {super.key, this.onMenuPressed, this.onDownloadPressed});
+      {super.key, this.onSharePressed, this.onDownloadPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -23,19 +24,22 @@ class CustomBottomAppBar extends StatelessWidget {
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: CircularElevatedButton(
-                onPressed: () {
-                  onMenuPressed?.call();
-                },
+                onPressed: () {},
                 backgroundColor: AppColors.white,
                 child: const Icon(
-                  Icons.menu,
+                  Icons.share,
                   color: AppColors.primaryColor,
                 ),
               ),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: AnimatedToggleButton(),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
