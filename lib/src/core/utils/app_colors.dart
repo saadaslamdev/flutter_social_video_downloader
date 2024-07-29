@@ -11,7 +11,7 @@ class AppColors {
   static const Color black = Color(0xFF000000);
   static const Color blackWithOpacity = Color(0x80000000);
   static const Color opacityLayerColor = Color(0xFFD9D9D9);
-  static const Color error = Color(0xFFFD1111);
-  static const Color success = Color.fromARGB(255, 16, 224, 26);
+  static const Color red = Color(0xFFFD1111);
+  static const Color green = Color.fromARGB(255, 16, 224, 26);
   static const Color light = Color(0xFFD9D9D9);
 }

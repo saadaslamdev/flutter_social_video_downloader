@@ -66,17 +66,17 @@ ThemeData getAppTheme() {
     inputDecorationTheme: InputDecorationTheme(
       labelStyle: getRegularStyle(color: AppColors.blackWithOpacity),
       hintStyle: getRegularStyle(color: AppColors.blackWithOpacity),
-      errorStyle: getLightStyle(color: AppColors.error),
+      errorStyle: getLightStyle(color: AppColors.red),
       fillColor: AppColors.light,
       filled: true,
       errorBorder: const OutlineInputBorder(
-        borderSide: BorderSide(color: AppColors.error, width: 1.5),
+        borderSide: BorderSide(color: AppColors.red, width: 1.5),
       ),
       focusedBorder: const OutlineInputBorder(
         borderSide: BorderSide(color: AppColors.black, width: 1.5),
       ),
       focusedErrorBorder: const OutlineInputBorder(
-        borderSide: BorderSide(color: AppColors.error, width: 1.5),
+        borderSide: BorderSide(color: AppColors.red, width: 1.5),
       ),
       enabledBorder: InputBorder.none,
     ),

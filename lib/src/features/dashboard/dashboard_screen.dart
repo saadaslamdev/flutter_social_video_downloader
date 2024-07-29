@@ -8,6 +8,7 @@ import 'package:flutter_social_videos_downloader/src/features/dashboard/widgets/
 import 'package:flutter_social_videos_downloader/src/features/dashboard/widgets/container_with_shadows.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../config/routes_manager.dart';
 import '../../core/utils/app_assets.dart';
 
 class DashboardScreen extends StatefulWidget {
@@ -85,17 +86,25 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                       children: [
                                         CircularElevatedButton(
                                           child: SvgPicture.asset(
-                                            AppAssets.facebookIcon,
+                                            AppAssets.facebook,
                                             fit: BoxFit.cover,
                                           ),
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.pushNamed(
+                                                context, Routes.downloader,
+                                                arguments: 'facebook');
+                                          },
                                         ),
                                         CircularElevatedButton(
                                           child: SvgPicture.asset(
-                                            AppAssets.instagramIcon,
+                                            AppAssets.instagram,
                                             fit: BoxFit.cover,
                                           ),
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.pushNamed(
+                                                context, Routes.downloader,
+                                                arguments: 'instagram');
+                                          },
                                         ),
                                       ],
                                     ),
@@ -108,17 +117,25 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                       children: [
                                         CircularElevatedButton(
                                           child: SvgPicture.asset(
-                                            AppAssets.tiktokIcon,
+                                            AppAssets.tiktok,
                                             fit: BoxFit.cover,
                                           ),
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.pushNamed(
+                                                context, Routes.downloader,
+                                                arguments: 'tiktok');
+                                          },
                                         ),
                                         CircularElevatedButton(
                                           child: SvgPicture.asset(
-                                            AppAssets.youtubeIcon,
+                                            AppAssets.youtube,
                                             fit: BoxFit.cover,
                                           ),
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.pushNamed(
+                                                context, Routes.downloader,
+                                                arguments: 'youtube');
+                                          },
                                         ),
                                       ],
                                     ),
@@ -132,10 +149,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                         SizedBox(width: context.width * 0.25),
                                         CircularElevatedButton(
                                           child: SvgPicture.asset(
-                                            AppAssets.shortsIcon,
+                                            AppAssets.shorts,
                                             fit: BoxFit.cover,
                                           ),
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.pushNamed(
+                                                context, Routes.downloader,
+                                                arguments: 'shorts');
+                                          },
                                         ),
                                         SizedBox(width: context.width * 0.25),
                                       ],
@@ -152,7 +173,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             ],
           ),
         ),
-        SafeArea(child: CustomBottomAppBar(onDownloadPressed: () {}))
+        CustomBottomAppBar(onDownloadPressed: () {})
       ],
     ));
   }
