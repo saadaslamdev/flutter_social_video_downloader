@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_social_videos_downloader/src/core/media_query.dart';
-import 'package:flutter_social_videos_downloader/src/features/dashboard/widgets/container_with_shadows.dart';
+import 'package:flutter_social_videos_downloader/src/core/common_widgets/container_with_shadows.dart';
 
 import '../../../core/utils/app_assets.dart';
 import '../../../core/utils/app_colors.dart';

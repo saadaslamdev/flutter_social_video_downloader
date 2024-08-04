@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/utils/app_colors.dart';
+import '../utils/app_colors.dart';
 
 class ContainerWithShadows extends StatelessWidget {
   final double widthMultiplier;
