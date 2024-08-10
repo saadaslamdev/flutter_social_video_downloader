@@ -50,7 +50,7 @@ class _SplashScreenState extends State<SplashScreen>
   navigateToNextScreen() {
     if (mounted) {
       Navigator.of(context).pushNamedAndRemoveUntil(
-        Routes.dashboard,
+        Routes.downloader,
         (route) => false,
       );
     }

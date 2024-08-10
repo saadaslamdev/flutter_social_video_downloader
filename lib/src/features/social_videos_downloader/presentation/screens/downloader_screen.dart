@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_social_videos_downloader/src/core/media_query.dart';
 import 'package:flutter_social_videos_downloader/src/core/utils/app_colors.dart';
-import 'package:flutter_social_videos_downloader/src/features/social_videos_downloader/presentation/widgets/downloader_Screen/downloader_screen_app_bar.dart';
+import 'package:flutter_social_videos_downloader/src/features/social_videos_downloader/presentation/widgets/downloader_Screen/Downloader_screen_appbar.dart';
+import 'package:flutter_social_videos_downloader/src/features/social_videos_downloader/presentation/widgets/downloader_Screen/downloader_screen_bottom_app_bar.dart';
+import 'package:flutter_social_videos_downloader/src/features/social_videos_downloader/presentation/widgets/downloader_Screen/downloader_screen_body.dart';
 
+import '../../../../config/routes_manager.dart';
 import '../../../../core/common_widgets/app_background.dart';
-import '../widgets/downloader_Screen/downloader_screen_body.dart';
 
 class DownloaderScreen extends StatefulWidget {
-  final String platformIcon;
-  const DownloaderScreen({super.key, required this.platformIcon});
+  const DownloaderScreen({super.key});
 
   @override
   State<DownloaderScreen> createState() => _DownloaderScreenState();
 }
 
 class _DownloaderScreenState extends State<DownloaderScreen> {
-  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
-  final TextEditingController videoLinkController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,16 +36,19 @@ class _DownloaderScreenState extends State<DownloaderScreen> {
           child: Stack(
             children: [
               const AppBackground(
-                heightRatio: 2.2,
+                heightRatio: 1.5,
               ),
               SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    DownloaderScreenAppBar(icon: widget.platformIcon),
                     SizedBox(
-                      height: context.height * 0.04,
+                      height: context.height * 0.02,
+                    ),
+                    const AppBarWithLogo(),
+                    SizedBox(
+                      height: context.height * 0.03,
                     ),
                     const DownloaderScreenBody(),
                   ],
@@ -55,6 +57,9 @@ class _DownloaderScreenState extends State<DownloaderScreen> {
             ],
           ),
         ),
+        DownloaderBottomAppBar(onDownloadPressed: () {
+          Navigator.of(context).pushNamed(Routes.downloads);
+        })
       ],
     ));
   }

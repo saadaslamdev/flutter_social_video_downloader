@@ -7,9 +7,9 @@ import '../../../../../core/utils/app_assets.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/styles_manager.dart';
 
-class DownloaderScreenAppBar extends StatelessWidget {
+class DownloaderScreenAppBarWithBackNavigation extends StatelessWidget {
   final String icon;
-  const DownloaderScreenAppBar({super.key, required this.icon});
+  const DownloaderScreenAppBarWithBackNavigation({super.key, required this.icon});
 
   @override
   Widget build(BuildContext context) {

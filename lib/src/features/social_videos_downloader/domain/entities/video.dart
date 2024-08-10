@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter_social_videos_downloader/src/features/social_videos_downloader/domain/entities/video_stats.dart';
 
 import 'video_link.dart';
 
@@ -13,6 +14,7 @@ class Video extends Equatable {
   final String? timeTaken;
   final String rId;
   final List<VideoLink> videoLinks;
+  final VideoStats? stats;
 
   const Video({
     required this.success,
@@ -25,6 +27,7 @@ class Video extends Equatable {
     required this.timeTaken,
     required this.rId,
     required this.videoLinks,
+    this.stats,
   });
 
   @override
@@ -39,6 +42,7 @@ class Video extends Equatable {
         timeTaken,
         rId,
         videoLinks,
+        stats,
       ];
 
   factory Video.fromJson(Map<String, dynamic> json) {
@@ -55,6 +59,7 @@ class Video extends Equatable {
       videoLinks: (json['links'] as List)
           .map((linkJson) => VideoLink.fromJson(linkJson))
           .toList(),
+      stats: json['stats'] != null ? VideoStats.fromJson(json['stats']) : null,
     );
   }
 }

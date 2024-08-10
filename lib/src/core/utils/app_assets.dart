@@ -7,6 +7,7 @@ class AppAssets {
   static const String youtube = "$_imageBasePath/youtube.svg";
   static const String tiktok = "$_imageBasePath/tiktok.svg";
   static const String shorts = "$_imageBasePath/youtube_shorts.svg";
+  static const String noInternetImage = "$_imageBasePath/SocialSaverLogo.png";
   static List<Map<String, String>> assetPath = const [
     {
       'facebook': facebook,

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_social_videos_downloader/src/core/media_query.dart';
-import 'package:flutter_social_videos_downloader/src/features/dashboard/widgets/circular_elevated_button.dart';
+import 'package:flutter_social_videos_downloader/src/core/common_widgets/circular_elevated_button.dart';
 
-import '../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_colors.dart';
 import 'animated_toggle_button.dart';
 
-class CustomBottomAppBar extends StatelessWidget {
+class DownloaderBottomAppBar extends StatelessWidget {
   final VoidCallback? onSharePressed;
   final VoidCallback? onDownloadPressed;
-  const CustomBottomAppBar(
+  const DownloaderBottomAppBar(
       {super.key, this.onSharePressed, this.onDownloadPressed});
 
   @override
