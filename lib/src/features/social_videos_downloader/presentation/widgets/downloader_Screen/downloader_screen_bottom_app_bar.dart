@@ -13,51 +13,48 @@ class DownloaderBottomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.bottomCenter,
-      child: Padding(
-        padding: const EdgeInsets.only(bottom: 10),
-        child: Container(
-          width: context.width / 1.1,
-          height: context.height / 11,
-          decoration: const BoxDecoration(
-            color: AppColors.primaryColor,
-            borderRadius: BorderRadius.all(Radius.circular(100)),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CircularElevatedButton(
-                  onPressed: () {},
-                  backgroundColor: AppColors.white,
-                  child: const Icon(
-                    Icons.share,
-                    color: AppColors.primaryColor,
-                  ),
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(10, 0, 10, 13),
+      child: Container(
+        width: context.width / 1.1,
+        height: context.height / 11,
+        decoration: const BoxDecoration(
+          color: AppColors.primaryColor,
+          borderRadius: BorderRadius.all(Radius.circular(100)),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: CircularElevatedButton(
+                onPressed: () {},
+                backgroundColor: AppColors.white,
+                child: const Icon(
+                  Icons.share,
+                  color: AppColors.primaryColor,
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: AnimatedToggleButton(),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CircularElevatedButton(
-                  onPressed: () {
-                    onDownloadPressed?.call();
-                  },
-                  backgroundColor: AppColors.white,
-                  child: const Icon(
-                    Icons.download,
-                    color: AppColors.primaryColor,
-                  ),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: AnimatedToggleButton(),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: CircularElevatedButton(
+                onPressed: () {
+                  onDownloadPressed?.call();
+                },
+                backgroundColor: AppColors.white,
+                child: const Icon(
+                  Icons.download,
+                  color: AppColors.primaryColor,
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

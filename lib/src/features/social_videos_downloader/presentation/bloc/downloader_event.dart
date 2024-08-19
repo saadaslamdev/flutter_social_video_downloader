@@ -15,8 +15,9 @@ class DownloaderGetVideo extends DownloaderEvent {
 
 class DownloaderSaveVideo extends DownloaderEvent {
   final Video video;
+  final String selectedLink;
 
-  const DownloaderSaveVideo({required this.video});
+  const DownloaderSaveVideo({required this.video, required this.selectedLink});
 
   @override
   List<Object?> get props => [video];

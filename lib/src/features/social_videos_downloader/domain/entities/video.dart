@@ -47,16 +47,16 @@ class Video extends Equatable {
 
   factory Video.fromJson(Map<String, dynamic> json) {
     return Video(
-      success: json['success'],
+      success: json['success'] ?? false,
       message: json['message'] ?? "",
-      srcUrl: json['src_url'],
+      srcUrl: json['src_url'] ?? "",
       ogUrl: json['og_url'] ?? "",
-      title: json['title'],
+      title: json['title'] ?? "",
       picture: json['picture'] ?? "",
       images: List<String>.from(json['images'] ?? []),
       timeTaken: json['timeTaken'] ?? "",
-      rId: json['r_id'],
-      videoLinks: (json['links'] as List)
+      rId: json['r_id'] ?? "",
+      videoLinks:  (json['links'] as List)
           .map((linkJson) => VideoLink.fromJson(linkJson))
           .toList(),
       stats: json['stats'] != null ? VideoStats.fromJson(json['stats']) : null,

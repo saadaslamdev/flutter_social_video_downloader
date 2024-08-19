@@ -57,7 +57,10 @@ class DownloaderBloc extends Bloc<DownloaderEvent, DownloaderState> {
       return;
     }
     final path = await _getPathById(event.video.rId);
-    final link = _processLink(event.video.videoLinks.first.link);
+    final selectedLink = event.video.videoLinks
+        .firstWhere((videoLink) => videoLink.quality == event.selectedLink)
+        .link;
+    final link = _processLink(selectedLink);
     DownloadItem item = DownloadItem(
       video: event.video,
       status: DownloadStatus.downloading,

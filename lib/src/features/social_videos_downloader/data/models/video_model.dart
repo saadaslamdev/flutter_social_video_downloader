@@ -19,20 +19,23 @@ class VideoModel extends Video {
 
   factory VideoModel.fromJson(Map<String, dynamic> json) {
     return VideoModel(
-        success: json['success'],
-        message: json['message'] ?? "",
-        srcUrl: json['src_url'],
-        ogUrl: json['og_url'] ?? "",
-        title: json['title'],
-        picture: json['picture'] ?? "",
-        images: List<String>.from(json['images'] ?? []),
-        timeTaken: json['timeTaken'] ?? "",
-        rId: json['r_id'],
-        videoLinks: (json['links'] as List)
-            .map((linkJson) => VideoLinkModel.fromJson(linkJson))
-            .toList(),
-        stats: json['stats'] != null
-            ? VideoStatsModel.fromJson(json['stats'])
-            : null);
+      success: json['success'] ?? false,
+      message: json['message'] ?? "",
+      srcUrl: json['src_url'] ?? "",
+      ogUrl: json['og_url'] ?? "",
+      title: json['title'] ?? "",
+      picture: json['picture'] ?? "",
+      images: List<String>.from(json['images'] ?? []),
+      timeTaken: json['timeTaken'] ?? "",
+      rId: json['r_id'] ?? "",
+      videoLinks: json['links'] != null
+          ? (json['links'] as List)
+              .map((linkJson) => VideoLinkModel.fromJson(linkJson))
+              .toList()
+          : [],
+      stats: json['stats'] != null
+          ? VideoStatsModel.fromJson(json['stats'])
+          : null,
+    );
   }
 }
