@@ -1,4 +1,4 @@
-# 📱 Social Saver
+# 📱 Social Saver with MVVM architecture using Bloc
 
 **Social Saver** is a powerful video downloader application built using Flutter, enabling users to download videos from multiple social media platforms including Instagram, YouTube, YouTube Shorts, TikTok, and Facebook.
 
