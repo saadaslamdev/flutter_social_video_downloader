@@ -1,16 +1,22 @@
 # 📱 Social Saver with MVVM architecture using Bloc
 
-**Social Saver** is a powerful video downloader application built using Flutter, enabling users to download videos from multiple social media platforms including Instagram, YouTube, YouTube Shorts, TikTok, and Facebook.
+**Social Saver** is a powerful video downloader application built using Flutter, enabling users to download videos from multiple social media platforms, including:
+
+- 📸 Instagram
+- ▶️ YouTube
+- 🎥 YouTube Shorts
+- 🎵 TikTok
+- 📘 Facebook
 
 ## 📷 App Previews
 
 | Splash Screen | Home (Light Mode) | Home (Dark Mode) |
 | :-----------: | :---------------: | :--------------: |
-| ![Splash](./assets/images/app_previews/splash_screen.JPG) | ![Home Light](./assets/images/app_previews/home_light_mode.JPG) | ![Home Dark](./assets/images/app_previews/home_dark_mode.JPG) |
+| ![Splash](./assets/images/app_previews/splash_screen.jpg) | ![Home Light](./assets/images/app_previews/home_light_mode.jpg) | ![Home Dark](./assets/images/app_previews/home_dark_mode.jpg) |
 
 | Get Download Links | Select Download Links | Downloading Screen |
 | :----------------: | :-------------------: | :----------------: |
-| ![Get Download](./assets/images/app_previews/get_download_links.JPG) | ![Select Download](./assets/images/app_previews/select_download_links.JPG) | ![Downloading](./assets/images/app_previews/downlaoding.JPG) |
+| ![Get Download](./assets/images/app_previews/get_download_links.jpg) | ![Select Download](./assets/images/app_previews/select_download_links.jpg) | ![Downloading](./assets/images/app_previews/downlaoding.jpg) |
 
 ---
 
