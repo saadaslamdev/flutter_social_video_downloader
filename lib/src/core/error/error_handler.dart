@@ -38,6 +38,7 @@ Failure _handleError(DioException dioError) {
 }
 
 Failure _handleResponseError(Response? response) {
+  print('responseee : ${response?.data}');
   switch (response?.statusCode) {
     case 400:
       return const BadRequestFailure();

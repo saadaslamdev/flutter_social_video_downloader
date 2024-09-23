@@ -6,6 +6,7 @@ import '../utils/font_manager.dart';
 
 Future<bool?> buildToast({required String msg, required ToastType type}) =>
     Fluttertoast.showToast(
+      timeInSecForIosWeb: 10,
       msg: msg,
       fontSize: FontSize.details,
       textColor: AppColors.white,

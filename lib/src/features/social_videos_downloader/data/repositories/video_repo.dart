@@ -10,7 +10,7 @@ import '../../domain/repositories/video_base_repo.dart';
 import '../data_source/video_remote_data_source.dart';
 
 class VideoRepo implements VideoBaseRepo {
-  final TiktokVideoBaseRemoteDataSource remoteDataSource;
+  final VideoBaseRemoteDataSource remoteDataSource;
   //final NetworkInfo networkInfo;
 
   VideoRepo({required this.remoteDataSource /*, required this.networkInfo*/});

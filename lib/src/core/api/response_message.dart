@@ -1,6 +1,8 @@
 class Authorized {
   static const String badRequest =
       "Bad request, Try again later"; // failure, API rejected request
+  static const String badRequestCertificateFailure =
+      "Bad request certificate failure, Try again later"; // failure, API rejected request
   static const String unauthorized =
       "User is unauthorized, Try again later"; // failure, user is not authorized
   static const String forbidden =

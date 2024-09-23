@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import '../features/social_videos_downloader/presentation/screens/downloader_screen.dart';
 import '../features/social_videos_downloader/presentation/screens/downloads_screen.dart';
@@ -23,7 +24,10 @@ class AppRounter {
       case Routes.downloads:
         return MaterialPageRoute(builder: (context) => const DownloadsScreen());
       case Routes.viewVideo:
-        return MaterialPageRoute(builder: (context) => const ViewVideoScreen());
+        return MaterialPageRoute(
+            builder: (context) => ViewVideoScreen(
+                  videoPath: setting.arguments as String,
+                ));
     }
     return null;
   }

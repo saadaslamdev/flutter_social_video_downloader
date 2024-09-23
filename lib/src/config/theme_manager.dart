@@ -47,7 +47,6 @@ ThemeData getAppTheme() {
       headlineMedium:
           getBoldStyle(fontSize: FontSize.subTitle, color: AppColors.white),
       titleLarge: getBoldStyle(color: AppColors.white),
-      // titleMedium Used in text form field
       titleMedium: getRegularStyle(color: AppColors.black),
       bodyLarge: getMediumStyle(color: AppColors.black),
       bodyMedium: getRegularStyle(color: AppColors.black),

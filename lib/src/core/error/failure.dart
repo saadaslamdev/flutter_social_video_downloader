@@ -29,7 +29,7 @@ class NoInternetConnectionFailure extends Failure {
 }
 
 class BadCertificateFailure extends Failure {
-  const BadCertificateFailure() : super(message: Authorized.badRequest);
+  const BadCertificateFailure() : super(message: Authorized.badRequestCertificateFailure);
 }
 
 class ConnectionErrorFailure extends Failure {

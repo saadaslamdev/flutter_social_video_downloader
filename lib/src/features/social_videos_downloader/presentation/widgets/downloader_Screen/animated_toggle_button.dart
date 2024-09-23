@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_social_videos_downloader/src/core/media_query.dart';
 import 'package:flutter_social_videos_downloader/src/core/utils/app_colors.dart';
 import 'package:flutter_social_videos_downloader/src/core/utils/app_strings.dart';
 import 'package:flutter_social_videos_downloader/src/core/utils/styles_manager.dart';
+import 'package:flutter_social_videos_downloader/src/features/social_videos_downloader/presentation/bloc/theme_bloc/theme_event.dart';
+
+import '../../bloc/theme_bloc/theme_bloc.dart';
 
 class AnimatedToggleButton extends StatefulWidget {
   const AnimatedToggleButton({super.key});
@@ -30,7 +34,7 @@ class _AnimatedToggleButtonState extends State<AnimatedToggleButton> {
               width: context.width * 0.2,
               height: context.height * 0.04,
               decoration: BoxDecoration(
-                color: AppColors.white,
+                color: Theme.of(context).scaffoldBackgroundColor,
                 borderRadius: BorderRadius.circular(100),
               ),
               child: Stack(
@@ -74,5 +78,7 @@ class _AnimatedToggleButtonState extends State<AnimatedToggleButton> {
     setState(() {
       isToggled = !isToggled;
     });
+    BlocProvider.of<ThemeBloc>(context).add(ThemeEventChange(
+        isToggled ? ThemeEventType.toggleLight : ThemeEventType.toggleDark));
   }
 }

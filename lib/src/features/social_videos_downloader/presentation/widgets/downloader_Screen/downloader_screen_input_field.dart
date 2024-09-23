@@ -7,7 +7,7 @@ import 'package:flutter_social_videos_downloader/src/core/utils/app_colors.dart'
 import '../../../../../core/common_widgets/container_with_shadows.dart';
 import '../../../../../core/common_widgets/custom_elevated_button.dart';
 import '../../../../../core/utils/app_strings.dart';
-import '../../bloc/downloader_bloc.dart';
+import '../../bloc/downloader_bloc/downloader_bloc.dart';
 
 class DownloaderScreenInputField extends StatelessWidget {
   final TextEditingController videoLinkController;
@@ -78,7 +78,6 @@ class DownloaderScreenInputField extends StatelessWidget {
         },
         decoration: InputDecoration(
           hintText: AppStrings.inputLinkFieldText,
-          fillColor: AppColors.white,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.0),
             borderSide: const BorderSide(

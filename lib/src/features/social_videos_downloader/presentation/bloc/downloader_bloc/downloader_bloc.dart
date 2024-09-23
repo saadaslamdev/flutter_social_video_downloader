@@ -7,14 +7,14 @@ import 'package:flutter_social_videos_downloader/src/features/social_videos_down
 import 'package:path_provider/path_provider.dart';
 import 'package:video_thumbnail/video_thumbnail.dart';
 
-import '../../../../core/helpers/dir_helper.dart';
-import '../../../../core/helpers/permission_helper.dart';
-import '../../../../core/utils/app_enums.dart';
-import '../../../../core/utils/app_strings.dart';
-import '../../domain/entities/download_item.dart';
-import '../../domain/entities/video_item.dart';
-import '../../domain/usecase/get_video_usecase.dart';
-import '../../domain/usecase/save_video_usecase.dart';
+import '../../../../../core/helpers/dir_helper.dart';
+import '../../../../../core/helpers/permission_helper.dart';
+import '../../../../../core/utils/app_enums.dart';
+import '../../../../../core/utils/app_strings.dart';
+import '../../../domain/entities/download_item.dart';
+import '../../../domain/entities/video_item.dart';
+import '../../../domain/usecase/get_video_usecase.dart';
+import '../../../domain/usecase/save_video_usecase.dart';
 
 part 'downloader_event.dart';
 
@@ -51,18 +51,20 @@ class DownloaderBloc extends Bloc<DownloaderEvent, DownloaderState> {
     DownloaderSaveVideo event,
     Emitter<DownloaderState> emit,
   ) async {
-    bool checkPermissions = await PermissionsHelper.checkPermission();
-    if (!checkPermissions) {
-      emit(const DownloaderSaveVideoFailure(AppStrings.permissionsRequired));
-      return;
-    }
+    // bool checkPermissions = await PermissionsHelper.checkPermission();
+    // if (!checkPermissions) {
+    //   emit(const DownloaderSaveVideoFailure(AppStrings.permissionsRequired));
+    //   return;
+    // }
     final path = await _getPathById(event.video.rId);
+    //final path = 'dummy_path';
     final selectedLink = event.video.videoLinks
         .firstWhere((videoLink) => videoLink.quality == event.selectedLink)
         .link;
     final link = _processLink(selectedLink);
     DownloadItem item = DownloadItem(
       video: event.video,
+      selectedLink: selectedLink,
       status: DownloadStatus.downloading,
       path: path,
     );
@@ -71,7 +73,7 @@ class DownloaderBloc extends Bloc<DownloaderEvent, DownloaderState> {
     _addItem(index, item);
     emit(const DownloaderSaveVideoLoading());
 
-    final result = await saveVideoUseCase(params);
+    final result = await saveVideoUseCase.call(params);
     result.fold(
       (failure) {
         _updateItem(index, item.copyWith(status: DownloadStatus.error));

@@ -9,7 +9,7 @@ import '../../../../../core/common_widgets/circular_loader_with_overlay.dart';
 import '../../../../../core/common_widgets/toast.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_enums.dart';
-import '../../bloc/downloader_bloc.dart';
+import '../../bloc/downloader_bloc/downloader_bloc.dart';
 import 'bottom_sheet/downloader_bottom_sheet.dart';
 import 'downloader_screen_input_field.dart';
 import 'downloader_screen_appbar.dart';

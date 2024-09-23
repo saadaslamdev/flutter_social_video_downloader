@@ -4,7 +4,7 @@ import '../../../../core/helpers/dio_helper.dart';
 import '../../../../core/utils/app_constants.dart';
 import '../../../../core/utils/app_strings.dart';
 
-abstract class TiktokVideoBaseRemoteDataSource {
+abstract class VideoBaseRemoteDataSource {
   Future<VideoModel> getVideo(String videoLink);
 
   Future<String> saveVideo({
@@ -13,7 +13,7 @@ abstract class TiktokVideoBaseRemoteDataSource {
   });
 }
 
-class TiktokVideoRemoteDataSource implements TiktokVideoBaseRemoteDataSource {
+class TiktokVideoRemoteDataSource implements VideoBaseRemoteDataSource {
   final DioHelper dioHelper;
 
   TiktokVideoRemoteDataSource({required this.dioHelper});

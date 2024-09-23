@@ -27,7 +27,7 @@ class ContainerWithShadows extends StatelessWidget {
                 end: Alignment.bottomRight,
               )
             : null,
-        color: applyGradient ? null : AppColors.white,
+        color: applyGradient ? null : Theme.of(context).scaffoldBackgroundColor,
         borderRadius: BorderRadius.circular(18),
         boxShadow: [
           BoxShadow(

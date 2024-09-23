@@ -30,7 +30,7 @@ class DownloaderBottomAppBar extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: CircularElevatedButton(
                 onPressed: () {},
-                backgroundColor: AppColors.white,
+                backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                 child: const Icon(
                   Icons.share,
                   color: AppColors.primaryColor,
@@ -47,7 +47,7 @@ class DownloaderBottomAppBar extends StatelessWidget {
                 onPressed: () {
                   onDownloadPressed?.call();
                 },
-                backgroundColor: AppColors.white,
+                backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                 child: const Icon(
                   Icons.download,
                   color: AppColors.primaryColor,

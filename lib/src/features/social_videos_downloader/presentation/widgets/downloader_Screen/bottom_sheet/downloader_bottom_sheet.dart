@@ -5,7 +5,7 @@ import 'package:flutter_social_videos_downloader/src/features/social_videos_down
 
 import '../../../../../../core/common_widgets/custom_elevated_button.dart';
 import '../../../../../../core/utils/app_strings.dart';
-import '../../../bloc/downloader_bloc.dart';
+import '../../../bloc/downloader_bloc/downloader_bloc.dart';
 import 'bottom_sheet_header.dart';
 import 'count_view.dart';
 

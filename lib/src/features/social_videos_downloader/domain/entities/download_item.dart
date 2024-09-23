@@ -5,20 +5,29 @@ import '../../../../core/utils/app_enums.dart';
 
 class DownloadItem extends Equatable {
   final Video video;
+  final String selectedLink;
   final DownloadStatus status;
   final String path;
 
   const DownloadItem(
-      {required this.video, required this.status, required this.path});
+      {required this.video,
+      required this.selectedLink,
+      required this.status,
+      required this.path});
 
-  DownloadItem copyWith({Video? video, DownloadStatus? status, String? path}) {
+  DownloadItem copyWith(
+      {Video? video,
+      String? selectedLink,
+      DownloadStatus? status,
+      String? path}) {
     return DownloadItem(
       video: video ?? this.video,
+      selectedLink: selectedLink ?? this.selectedLink,
       status: status ?? this.status,
       path: path ?? this.path,
     );
   }
 
   @override
-  List<Object> get props => [video, status, path];
+  List<Object> get props => [video, selectedLink, status, path];
 }

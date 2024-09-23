@@ -5,11 +5,11 @@ import '../../container_injector.dart';
 import 'data/data_source/video_remote_data_source.dart';
 import 'domain/usecase/get_video_usecase.dart';
 import 'domain/usecase/save_video_usecase.dart';
-import 'presentation/bloc/downloader_bloc.dart';
+import 'presentation/bloc/downloader_bloc/downloader_bloc.dart';
 
 void initDownloader() {
   // data source
-  sl.registerLazySingleton<TiktokVideoBaseRemoteDataSource>(
+  sl.registerLazySingleton<VideoBaseRemoteDataSource>(
     () => TiktokVideoRemoteDataSource(dioHelper: sl()),
   );
   // repository
