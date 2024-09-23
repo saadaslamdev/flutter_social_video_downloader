@@ -1,16 +1,42 @@
-# flutter_social_video_downloader
+# tiktok_downloader
 
-A new Flutter project.
+Tiktok downloader application with RESTFUL API designed by flutter
 
-## Getting Started
+## 📷 Previews
 
-This project is a starting point for a Flutter application.
+- Splash Screen
+  ![About](./assets/previews/splash_screen.JPG)
 
-A few resources to get you started if this is your first Flutter project:
+- Home preview with Light & Dark Modes
+  ![Home](./assets/previews/home_light_mode.JPG) ![Home](./assets/previews/home_dark_mode.JPG)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Get Download Links
+  ![About](./assets/previews/get_download_links.JPG)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Select Download Links 
+  ![Projects](./assets/previews/select_download_links.JPG)
+
+- Downlaoding Screen
+  ![Contact](./assets/previews/downlaoding.JPG)
+
+## TikTok downloader app with:
+- Bloc state-management
+- Clean architecture & clean code
+
+## Features:
+- Download TikTok videos by link
+- Open video if download success
+- Retry download if failed
+- Create specific folder for downloaded videos
+- Save video in gallery
+
+## Packages used:
+- [Dependency injection by get_it](https://pub.dev/packages/get_it)
+- [internet connection checker](https://pub.dev/packages/internet_connection_checker)
+- [dartz](https://pub.dev/packages/dartz)
+- [equitable](https://pub.dev/packages/equatable)
+- [Dio for requests and download videos](https://pub.dev/packages/dio)
+- [permission_handler](https://pub.dev/packages/permission_handler)
+- [play video by open_file](https://pub.dev/packages/open_file)
+- [get app path by path_provider](https://pub.dev/packages/path_provider)
+- [gallery_saver for save videos in gallery](https://pub.dev/packages/gallery_saver)
