@@ -12,7 +12,7 @@
 
 | Splash Screen | Home (Light Mode) | Home (Dark Mode) |
 | :-----------: | :---------------: | :--------------: |
-| ![Splash](./assets/images/app_previews/splash_screen.jpg) | ![Home Light](./assets/images/app_previews/home_light_mode.jpg) | ![Home Dark](./assets/images/app_previews/home_dark_mode.jpg) |
+| ![Splash](./assets/images/app_previews/splash_screen.jpg) | ![Home Light](./assets/images/app_previews/home_light_mode.JPG) | ![Home Dark](./assets/images/app_previews/home_dark_mode.JPG) |
 
 | Get Download Links | Select Download Links | Downloading Screen |
 | :----------------: | :-------------------: | :----------------: |
