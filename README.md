@@ -5,19 +5,19 @@ Tiktok downloader application with RESTFUL API designed by flutter
 ## 📷 Previews
 
 - Splash Screen
-  ![About](./assets/previews/splash_screen.JPG)
+  ![Splash](./assets/images/app_previews/splash_screen.JPG)
 
 - Home preview with Light & Dark Modes
-  ![Home](./assets/previews/home_light_mode.JPG) ![Home](./assets/previews/home_dark_mode.JPG)
+  ![Home](./assets/images/app_previews/home_light_mode.JPG) ![Home](./assets/images/app_previews/home_dark_mode.JPG)
 
 - Get Download Links
-  ![About](./assets/previews/get_download_links.JPG)
+  ![Get Download](./assets/images/app_previews/get_download_links.JPG)
 
 - Select Download Links 
-  ![Projects](./assets/previews/select_download_links.JPG)
+  ![Select Download](./assets/images/app_previews/select_download_links.JPG)
 
 - Downlaoding Screen
-  ![Contact](./assets/previews/downlaoding.JPG)
+  ![Downloading](./assets/images/app_previews/downlaoding.JPG)
 
 ## TikTok downloader app with:
 - Bloc state-management
