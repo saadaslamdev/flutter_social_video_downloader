@@ -14,8 +14,8 @@ Future<dynamic> buildDownloadBottomSheet(
   Video video,
 ) {
   var selectedQuality = video.videoLinks.first.quality;
-  print(selectedQuality);
   return showModalBottomSheet(
+    backgroundColor: Theme.of(context).scaffoldBackgroundColor,
     context: context,
     builder: (_) {
       return Container(
